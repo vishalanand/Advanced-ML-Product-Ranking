@@ -1,4 +1,4 @@
-import sys, codecs, re, pdb, time, datetime, math, tqdm, pickle, numpy as np
+import sys, codecs, re, time, datetime, math, pickle
 
 def build_movies_dict(movies_file):
     i = 0
@@ -19,21 +19,17 @@ def build_movies_dict(movies_file):
 def read_data(input_file,movies_dict):
     users =  138493
     movies = 27278
-    i = 0
     ret = []
 
     prev_user = 0;
     with open(input_file,'r') as f:
         for line in f:
-            if i == 0:
-                i = i +1
-            else:
-                user,movie_id,rating,timestamp = line.split(',')
-                id = movies_dict[int(movie_id)]
-                cur_row = int(user) - 1
-                cur_col = id
-                cur_data = float(rating)
-                ret.append((cur_row, cur_col, cur_data))
+            user,movie_id,rating,timestamp = line.split(',')
+            id = movies_dict[int(movie_id)]
+            cur_row = int(user) - 1
+            cur_col = id
+            cur_data = float(rating)
+            ret.append((cur_row, cur_col, cur_data))
     return ret
 
 def loader(test_ratings_file, train_ratings_file, movies_mapping_file, f_output_val):
@@ -94,7 +90,8 @@ def matrix_factorization(R_train, R_test, V, W, rank, steps, lambd, eta, f_outpu
         print("MRR:\t", datetime.datetime.now().time(), "\t", MRR, "\n", file=f_output_val, flush=True)
         
         with open("output/rank_" + str(rank) + "_lambda_" + str(lambd) + "_iter_" + str(i+1) + "_step_" + str(eta) + ".pkl", 'wb') as f:
-            pickle.dump([V, W, rank, lambd, i+1, eta, RMSE_train, RMSE_test, MRR], f)
+            #pickle.dump([V, W, rank, lambd, i+1, eta, RMSE_train, RMSE_test, MRR], f)
+            pickle.dump([rank, lambd, i+1, eta, RMSE_train, RMSE_test, MRR], f)
         
         if(abs(RMSE_train - RMSE_old) < 0.001):
            break
@@ -121,7 +118,7 @@ def main():
     
     n = 138493
     m = 27278
-    steps=1
+    steps=20
     eta=0.002
 
     f_output_val=open(f_output, 'w+')
