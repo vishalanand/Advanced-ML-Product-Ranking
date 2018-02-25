@@ -6,7 +6,7 @@ eta = 0.002
 
 for rank in ranks:
 	for lambd in lambds:
-		for i in range(10):
+		for i in range(20):
 			f_save = "output/rank_" + str(rank) + "_lambda_" + str(lambd) + "_iter_" + str(i+1) + "_step_" + str(eta) + ".pkl"
 			try:
 				with open(f_save, 'rb') as f:
