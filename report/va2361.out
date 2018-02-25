@@ -1,0 +1,28 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{RMSETest, RMSETrain, MRR Data Produced: Pre-Analysis}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Split-1}{section.2}% 3
+\BOOKMARK [1][-]{section.3}{Splitting the data}{}% 4
+\BOOKMARK [2][-]{subsection.3.1}{Loading the data-set}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.2}{Matrix Update and Stochastic Gradient Descent}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.3}{Root Mean Square Error Calculation}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.4}{Mean Reciprocal Rank Calculation}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.5}{Grid Search}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{Graphs}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{average RMSE over r and }{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{average MRR over r and }{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.3}{standard deviation of RMSE over r and }{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.4}{standard deviation of MRR over r and }{section.4}% 14
+\BOOKMARK [1][-]{section.5}{Codes and Links}{}% 15
+\BOOKMARK [1][-]{section.6}{Page Style}{}% 16
+\BOOKMARK [2][-]{subsection.6.1}{Text Font of Entire Document}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.2}{Section Headings}{section.6}% 18
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Level-1 Heading}{subsection.6.2}% 19
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Level-2 Heading}{subsection.6.2}% 20
+\BOOKMARK [3][-]{subsubsection.6.2.3}{Level-3 Heading}{subsection.6.2}% 21
+\BOOKMARK [2][-]{subsection.6.3}{Figures and Tables}{section.6}% 22
+\BOOKMARK [2][-]{subsection.6.4}{Figure Captions}{section.6}% 23
+\BOOKMARK [2][-]{subsection.6.5}{Table Captions}{section.6}% 24
+\BOOKMARK [2][-]{subsection.6.6}{Page Numbers, Headers and Footers}{section.6}% 25
+\BOOKMARK [2][-]{subsection.6.7}{Links and Bookmarks}{section.6}% 26
+\BOOKMARK [2][-]{subsection.6.8}{References}{section.6}% 27
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 28
